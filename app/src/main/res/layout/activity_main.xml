@@ -1,18 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.ws.model.wechat.ativity.MainActivity">
-
-    <TextView
-        android:layout_width="wrap_content"
+    tools:context="com.ws.model.wechat.ativity.MainActivity"
+    android:orientation="vertical"
+    >
+    <fragment
+        android:id="@+id/fm_top"
+        android:name="com.ws.model.wechat.ativity.TopFragment"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+       />
 
-</android.support.constraint.ConstraintLayout>
+    <fragment
+        android:id="@+id/fm_wechat"
+        android:name="com.ws.model.wechat.ativity.WeChatFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/fm_top"
+        >
+    </fragment>
+    <fragment
+        android:id="@+id/fm_address"
+        android:name="com.ws.model.wechat.ativity.AddressFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/fm_top"
+        >
+    </fragment>
+    <fragment
+        android:id="@+id/fm_find"
+        android:name="com.ws.model.wechat.ativity.FindFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/fm_top"
+        >
+    </fragment>
+    <fragment
+        android:id="@+id/fm_my"
+        android:name="com.ws.model.wechat.ativity.MyFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/fm_top"
+        >
+    </fragment>
+    <fragment
+        android:id="@+id/fm_buttom"
+        android:name="com.ws.model.wechat.ativity.ButtomFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        >
+    </fragment>
+</RelativeLayout>
