@@ -4,7 +4,7 @@ import android.content.Context;
 import android.widget.ListView;
 
 import com.ws.model.wechat.MyAdapter.AddressAdapter;
-import com.ws.model.wechat.R;
+import com.ws.model.wechat.dao.AddressDao;
 import com.ws.model.wechat.model.User;
 
 import java.util.ArrayList;
@@ -16,7 +16,9 @@ import java.util.List;
 
 public class AddressBiz {
 
-    public void initAddress(Context context,ListView lv_address){
+    private AddressDao addressDao=new AddressDao();
+    public void initAddress(Context context,ListView lv_address,Context context2){
+        addressDao.getFriend(context2);
         List<User> users=new ArrayList<User>();
         User user1,user2,user3;
         user1=new User();user2=new User();user3=new User();

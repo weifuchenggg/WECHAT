@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         init();
-        addressBiz.initAddress(this,lv_address);
+        addressBiz.initAddress(this,lv_address,getApplicationContext());
     }
 
     private void init() {
