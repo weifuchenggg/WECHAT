@@ -6,20 +6,26 @@ import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ListView;
 import android.widget.Toast;
 
+import com.ws.model.wechat.MyAdapter.AddressAdapter;
 import com.ws.model.wechat.R;
+import com.ws.model.wechat.biz.AddressBiz;
 
 public class MainActivity extends AppCompatActivity {
 
     private Fragment fm_top,fm_wechat,fm_address,fm_find,fm_my,fm_buttom,current;
     private FragmentTransaction transaction;
     private FragmentManager manager;
+    private   ListView lv_address;
+    private AddressBiz addressBiz=new AddressBiz();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         init();
+        addressBiz.initAddress(this,lv_address);
     }
 
     private void init() {
@@ -30,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
         fm_find=manager.findFragmentById(R.id.fm_find);
         fm_my=manager.findFragmentById(R.id.fm_my);
         fm_buttom=manager.findFragmentById(R.id.fm_buttom);
+        lv_address=(ListView)this.findViewById(R.id.lv_address);
         current=fm_wechat;
 
         transaction=manager.beginTransaction();
