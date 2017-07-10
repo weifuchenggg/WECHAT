@@ -18,33 +18,33 @@
         android:id="@+id/fm_wechat"
         android:name="com.ws.model.wechat.ativity.WeChatFragment"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_below="@+id/fm_top"
-        >
+        android:layout_above="@+id/fm_buttom">
     </fragment>
     <fragment
         android:id="@+id/fm_address"
         android:name="com.ws.model.wechat.ativity.AddressFragment"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_below="@+id/fm_top"
-        >
+        android:layout_above="@+id/fm_buttom">
     </fragment>
     <fragment
         android:id="@+id/fm_find"
         android:name="com.ws.model.wechat.ativity.FindFragment"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_below="@+id/fm_top"
-        >
+        android:layout_above="@+id/fm_buttom">
     </fragment>
     <fragment
         android:id="@+id/fm_my"
         android:name="com.ws.model.wechat.ativity.MyFragment"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_below="@+id/fm_top"
-        >
+        android:layout_above="@+id/fm_buttom">
     </fragment>
     <fragment
         android:id="@+id/fm_buttom"

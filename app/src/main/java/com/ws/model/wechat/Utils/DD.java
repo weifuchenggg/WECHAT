@@ -5,5 +5,6 @@ package com.ws.model.wechat.Utils;
  */
 
 public class DD {
-    public static String url="http://192.168.1.100:8080//WeChat/hello?";
+    public static String url="http://192.168.1.100:8080//WeChat/";
+
 }

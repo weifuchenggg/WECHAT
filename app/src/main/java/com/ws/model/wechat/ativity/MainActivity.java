@@ -39,6 +39,8 @@ public class MainActivity extends AppCompatActivity {
         transaction.commit();
     }
 
+
+
     //微信按钮单击事件
     public void weChat(View view) {
         if(current!=fm_wechat){
