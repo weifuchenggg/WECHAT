@@ -7,6 +7,7 @@ import android.widget.Toast;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
+import com.ws.model.wechat.MyReicerver.AddressReicerver;
 import com.ws.model.wechat.Utils.DD;
 import com.ws.model.wechat.Utils.OkHttpUtils;
 import com.ws.model.wechat.Utils.USER;
@@ -21,7 +22,7 @@ import java.util.List;
  */
 
 public class AddressDao {
-    public void getFriend(Context context){
+    public void getFriend(final Context context){
         String id= USER.user.getUsername();
        OkHttpUtils<String> utils=new OkHttpUtils<>(context);
         String url= DD.url+"friend/getFriend?";
@@ -34,8 +35,12 @@ public class AddressDao {
                 for (User user:users){
                     Log.e("main",user.toString());
                 }
+                AddressReicerver.users=users;
+                Intent intent=new Intent();
+                intent.setAction("addressReicerver");
+                intent.putExtra("aa","bb");
+                context.sendBroadcast(intent);
             }
-
             @Override
             public void onError(String error) {
 

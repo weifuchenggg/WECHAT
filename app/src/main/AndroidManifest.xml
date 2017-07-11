@@ -20,6 +20,11 @@
              <category android:name="android.intent.category.LAUNCHER" />
              </intent-filter>
         </activity>
+        <receiver android:name=".MyReicerver.AddressReicerver">
+            <intent-filter>
+                <action android:name="addressReicerver"></action>
+            </intent-filter>
+        </receiver>
     </application>
 
 </manifest>
